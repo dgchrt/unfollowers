@@ -36,16 +36,10 @@ def valid_user(name: str):
 if __name__ == "__main__":
     followers_content = multi_line_input("Copy and paste your followers content here:")
     followers = extract_users("Followers", followers_content)
-    print("Followers:")
-    print(followers)
     following_content = multi_line_input("Copy and paste your following content here:")
     following = extract_users("Following", following_content)
-    print("Following:")
-    print(following)
-
     unfollowers = sorted(following - followers)
-
-    print("Your unfollowers are:")
+    print(f"You have {len(unfollowers)} unfollowers:")
 
     for username in unfollowers:
         print(username)
