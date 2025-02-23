@@ -34,9 +34,6 @@ def valid_user(name: str):
 
 
 if __name__ == "__main__":
-    print(
-        "This program will ask for your list of followers and following from a prominent picture-focused Internet forum, then display who's not following you back. Please open your profile on your browser, open each list when asked, scroll down to load the whole list, select all (Ctrl+A), copy (Ctrl+C) and paste (Shift+Ctrl+V), then hit Enter twice after pasting the content to proceed."
-    )
     followers_content = multi_line_input("Copy and paste your followers content here:")
     followers = extract_users("Followers", followers_content)
     print("Followers:")
