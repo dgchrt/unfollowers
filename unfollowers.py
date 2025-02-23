@@ -3,7 +3,8 @@
 
 def extract_users(list_name: str, content: str):
     header = f"{list_name}\nSearch\n"
-    list = content.split(header)[1]
+    footer = f"\nSuggested for you\n"
+    list = content.split(header)[1].split(footer)[0]
     lines = list.splitlines()
     filtered_lines = [line for line in lines if line.strip() != "·"]
     users = [line for line in filtered_lines if valid_user(line)]
